@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+CONTACT PAGE
+{% endblock title %}
+{% block body %}
+
+
+
+<h3><span class="badge badge-primary mt-2"> Contact Us </span> </h3>
+
+
+<form action="/contact" method="POST">{% csrf_token %}
+
+ <div class="form-group">
+   <input type="text" class="form-control" id="name" name="name" placeholder="Name"required >
+ </div>
+
+ <div class="form-group"> 
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email"required >
+  </div>
+ 
+  <div class="form-group">
+    <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone No"required>
+  </div>
+
+<div class="form-group">
+  <textarea class="form-control" id="desc" name="desc" rows="3" placeholder="remarks"required></textarea>
+ </div>
+
+ <button class="btn btn-sm btn-danger" type="submit">submit</button>
+ 
+</form>
+   
+</div>
+
+{% endblock body %}

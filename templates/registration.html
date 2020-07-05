@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title %}
+REGISTER PAGE
+{% endblock title %}
+{% block body %}
+
+
+<div class="container mt-3">>
+<h3><span class="badge badge-primary mt-2"> REGISTER HERE </span> </h3>
+
+<form action="/registration" method="POST"> {% csrf_token %}
+
+<form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>NAME</label>
+        <input type="text" class="form-control" id="name" name='name' placeholder="Enter Name" reqired>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label>EMAIL ID</label>
+        <input type="email" class="form-control" id="email" name='email' placeholder="Enter Email id" required>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>PHONE NO</label>
+          <input type="text" class="form-control" id="phone" name='phone' placeholder=" Enter Phone No" reqired>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label>TRIP TO</label>
+          <select type="gender" class="form-control" id="gender" name='gender' placeholder="select place" required>
+            <option>select place</option>   
+          <option>bangalore</option>
+          <option>mysore</option>
+          <option>kerala</option>
+          <option>ooty</option>
+          <option>hyderabad</option>
+          </select>
+        </div>
+  
+    </div>
+
+    <div class="form-group">
+      <label>PLACE OF PICK AND DROP</label>
+      <input type="text" class="form-control" id="address1" name="address1" placeholder=" Enter Local address" required>
+    </div>
+
+    <div class="form-group">
+      <label>NUMBER OF PEOPLE</label>
+      <input type="text" class="form-control" id="address2" name="address2" placeholder="including childrens" required>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>DATES</label>
+        <input type="text" class="form-control" id="city" name='city' placeholder="check-in and check-out" required>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label>BUDGET</label>
+        <select id="state" name="state" class="form-control" placeholder="enter budget" required>
+          <option>5000-10000</option>
+          <option>10000-20000</option>
+          <option>20000-30000</option>
+          <option>30000-40000</option>
+          <option>40000-50000</option>
+          <option>50000-60000</option>
+        </select>
+      </div>
+      
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+
+  </form>
+</div>
+
+{% endblock body %}
